@@ -3,7 +3,7 @@ const router = express.Router();
 const { getList, getDetails, postNewRecord } = require('./controller');
 
 router.get('/list', getList);
-router.get('/details', getDetails);
-router.post('/newRecord', postNewRecord);
+router.get('/details/:id', getDetails);
+router.post('/list', postNewRecord);
 
 module.exports = router;
