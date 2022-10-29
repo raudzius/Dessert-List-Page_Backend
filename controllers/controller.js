@@ -1,12 +1,13 @@
 const Dessert = require('../schemas/dessertSchema');
 
-const getList = (req, res) => {
-  res.send(list);
+const getList = async (req, res) => {
+  const desserts = await Dessert.find({});
+  res.send(desserts);
 };
-const getDetails = (req, res) => {
-  const id = req.params.id;
-  const listItem = list.find((item) => item.id === Number(id));
-  res.send(listItem);
+const getDetails = async (req, res) => {
+  const { id } = req.params;
+  const dessert = await Dessert.findOne({ _id: id });
+  res.send(dessert);
 };
 const postNewRecord = async (req, res) => {
   const dessert = new Dessert(req.body);

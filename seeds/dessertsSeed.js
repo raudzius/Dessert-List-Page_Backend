@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Dessert = require('../schemas/dessertSchema');
 
 mongoose
-  .connect('mongodb+srv://admin:admin@cluster0.hmheqd3.mongodb.net/?retryWrites=true&w=majority')
+  .connect('mongodb+srv://admin:admin@cluster0.hmheqd3.mongodb.net/desserts?retryWrites=true&w=majority')
   .then(() => {
     console.log('Conneted ok');
   })
