@@ -9,7 +9,7 @@ mongoose
     'mongodb+srv://admin:admin@cluster0.hmheqd3.mongodb.net/desserts?retryWrites=true&w=majority'
   )
   .then(() => {
-    console.log('Conneted ok');
+    console.log('Connected ok');
   })
   .catch((e) => {
     console.log(e);
