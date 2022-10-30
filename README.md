@@ -12,5 +12,5 @@
 
 open CLI in current folder and launch command:
 ```
-nodemon app
+npm start
 ```
