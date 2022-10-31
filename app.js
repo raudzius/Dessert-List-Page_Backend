@@ -1,13 +1,14 @@
+const dotenv = require('dotenv');
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const routes = require('./routes/routes');
 const app = express();
 
+dotenv.config({ path: './config.env' });
+
 mongoose
-  .connect(
-    'mongodb+srv://admin:admin@cluster0.hmheqd3.mongodb.net/desserts?retryWrites=true&w=majority'
-  )
+  .connect(process.env.DATABASE)
   .then(() => {
     console.log('Connected ok');
   })
